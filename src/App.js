@@ -4,11 +4,12 @@ import "./App.css";
 
 class App extends Component {
   render() {
+    const welcome = "Welcome to React";
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <Welcome />
+          <Welcome text={welcome} />
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
@@ -20,8 +21,8 @@ class App extends Component {
 
 class Welcome extends Component {
   render() {
-    const welcome = "Welcome to React";
-    return <h1 className="App-title">{welcome}</h1>;
+    const { text } = this.props;
+    return <h1 className="App-title">{text}</h1>;
   }
 }
 
