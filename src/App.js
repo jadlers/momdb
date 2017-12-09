@@ -8,13 +8,20 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <Welcome />
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
     );
+  }
+}
+
+class Welcome extends Component {
+  render() {
+    const welcome = "Welcome to React";
+    return <h1 className="App-title">{welcome}</h1>;
   }
 }
 
