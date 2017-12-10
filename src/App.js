@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 class App extends Component {
-  toggle = () => this.setState({ showParagraph: !this.state.showParagraph });
+  submit = () => console.log(this.text.value);
 
   render() {
     const welcome = "Welcome to React";
@@ -16,7 +16,8 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <button onClick={this.toggle}>Show / Hide</button>
+        <input type="text" ref={input => (this.text = input)} />
+        <button onClick={this.submit}>Show Value</button>
       </div>
     );
   }
