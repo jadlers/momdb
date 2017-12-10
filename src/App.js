@@ -3,6 +3,19 @@ import logo from "./logo.svg";
 import "./App.css";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    console.log("Constructor");
+  }
+
+  componentWillMount() {
+    console.log("Will mount");
+  }
+
+  componentDidMount() {
+    console.log("Did mount");
+  }
+
   state = {
     showParagraph: true
   };
