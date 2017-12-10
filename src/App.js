@@ -3,23 +3,6 @@ import logo from "./logo.svg";
 import "./App.css";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    console.log("Constructor");
-  }
-
-  componentWillMount() {
-    console.log("Will mount");
-  }
-
-  componentDidMount() {
-    console.log("Did mount");
-  }
-
-  state = {
-    showParagraph: true
-  };
-
   toggle = () => this.setState({ showParagraph: !this.state.showParagraph });
 
   render() {
@@ -28,13 +11,12 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <Welcome text={welcome} toggle={this.state.showParagraph} />
+          <Welcome text={welcome} />
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <button onClick={this.toggle}>Show / Hide</button>
-        {this.state.showParagraph && <p>This should show &amp; hide</p>}
       </div>
     );
   }
@@ -42,8 +24,7 @@ class App extends Component {
 
 class Welcome extends Component {
   render() {
-    const { text, toggle } = this.props;
-    console.log(toggle);
+    const { text } = this.props;
     return <h1 className="App-title">{text}</h1>;
   }
 }
