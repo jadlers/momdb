@@ -22,6 +22,7 @@ module.exports = {
   rules: {
     'react/jsx-filename-extension': 0,
     'max-len': ['error', { code: 80 }],
+    'jsx-a11y/anchor-is-valid': 0,
     ignoreTrailingComments: true,
   },
 };
