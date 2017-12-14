@@ -1,5 +1,6 @@
 /* eslint react/no-did-mount-set-state: 0 */
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 const POSTER_BASE_PATH = 'http://image.tmdb.org/t/p/w154';
 const BACKDROP_BASE_PATH = 'http://image.tmdb.org/t/p/w1280';
@@ -44,3 +45,11 @@ class MovieDetail extends Component {
 }
 
 export default MovieDetail;
+
+MovieDetail.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
