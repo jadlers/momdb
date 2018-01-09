@@ -1,6 +1,6 @@
 /* eslint react/no-did-mount-set-state: 0 */
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { number, shape } from 'prop-types';
 import styled from 'styled-components';
 import Overdrive from 'react-overdrive';
 import { Poster } from './Movie';
@@ -52,9 +52,9 @@ class MovieDetail extends Component {
 export default MovieDetail;
 
 MovieDetail.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      id: PropTypes.string.isRequired,
+  match: shape({
+    params: shape({
+      id: number.isRequired,
     }).isRequired,
   }).isRequired,
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { shape, string } from 'prop-types';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Overdrive from 'react-overdrive';
@@ -18,9 +18,9 @@ const Movie = ({ movie }) => (
 );
 
 Movie.propTypes = {
-  movie: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    poster_path: PropTypes.string.isRequired,
+  movie: shape({
+    title: string.isRequired,
+    poster_path: string.isRequired,
   }).isRequired,
 };
 
