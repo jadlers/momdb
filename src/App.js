@@ -10,6 +10,7 @@ import logo from './logo.svg';
 import './App.css';
 import MovieList from './MovieList';
 import MovieDetail from './MovieDetail';
+import Toggle from './Toggle';
 
 const store = createStore(rootReducer, {}, composeWithDevTools());
 
@@ -22,6 +23,7 @@ const App = () => (
             <img src={logo} className="App-logo" alt="logo" />
           </Link>
         </header>
+        <Toggle />
         <Switch>
           <Route exact path="/" component={MovieList} />
           <Route path="/:id" component={MovieDetail} />
