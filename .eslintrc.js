@@ -23,6 +23,8 @@ module.exports = {
     'react/jsx-filename-extension': 0,
     'max-len': ['error', { code: 80 }],
     'jsx-a11y/anchor-is-valid': 0,
+    'comma-dangle': 'always-multiline',
+    quotes: ['error', 'single'],
     ignoreTrailingComments: true,
   },
 };
